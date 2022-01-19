@@ -1,0 +1,43 @@
+<div style="height: 80px; border-bottom: 1px solid darkgray;padding: 0;margin: 0;" class="card container-fluid">
+    <div class="container d-flex">
+        <div class="item1">
+            <a style="cursor: pointer;" (click)="filter('')">
+                <i style="font-size: 38px;color: orange; margin-left: 92px;" class="fas fa-box-open"></i>
+                <p class="item1-text">All Products</p>
+            </a>
+        </div>
+        <div style="cursor: pointer;" class="item2">
+            <a (click)="filter('electronics')">
+                <img class="elec-img" src="assets/images/electronics.jfif">
+                <p class="elec-text">Electronics</p>
+            </a>
+        </div>
+        <div class="item3">
+            <a (click)="filter('fashion')">
+                <img class="fash-img" src="assets/images/fashion.jfif">
+                <p class="fash-text">Fashion</p>
+            </a>
+        </div>
+        <div class="item4">
+            <a (click)="filter('jewelery')">
+                <img class="jewel-img" src="assets/images/jewel.jfif">
+                <p class="jewel-text">Jewellery</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row table-responsive">
+        <ng-container *ngFor="let item of productList | filter:searchKey:'title'">
+            <!--filter having the searchkey which is title.......
+            left side data is value in service we gave value parameter which is the leftside data and the remining parameters like filetrstring and propname are rightside filter is filterstring serachkey is propname -->
+            <div class="card col-md-3">
+                <img class="prodImg" src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{item.description}}</p>
+                <p><strong>Price</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)="addtocart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
