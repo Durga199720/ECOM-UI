@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar bg-primary shadow-sm">
+        <div class="navbar-content align-item-center d-flex">
+            <i class="fas fa-shipping-fast" routerLink="" style="color: white;padding-top: 9px;cursor: pointer;">
+                <strong>Shoppingkart</strong>
+            </i>
+            <div class="form-group">
+                <input class="form-control" type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search">
+                <!--ngModel is used here to get the serach item from product list, keyup is used for to serach the data-->
+            </div>
+            <span class="fas fa-search search-icon"></span>
+        </div>
+        <button style="border: none;background: none;margin-right: 108px;" class="cart-btn" routerLink="/cart"><i style="color: #fff;font-size: 21px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 9px;" class="badge badge-light bg-danger">{{totalItems}}</div>
+        </button>
+    </nav>
+</header>

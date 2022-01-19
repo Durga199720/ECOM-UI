@@ -1,0 +1,77 @@
+.navbar {
+    display: flex;
+}
+
+.form-control {
+    margin-left: 20px;
+    display: flex;
+    width: 600px;
+    border: none;
+    border-radius: 3px;
+}
+
+.navbar-content {
+    margin-left: 98px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-search {
+    margin-left: -28px;
+    margin-top: 10px;
+    color: blue;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: 60px;
+    }
+    .form-control {
+        display: flex;
+        border: 1px solid;
+        flex-direction: row;
+        width: auto;
+    }
+    .fa-search {
+        display: flex;
+        margin-left: -25px;
+        margin-top: 10px;
+    }
+    .navbar-content {
+        margin-left: 10px;
+    }
+    .fa-shipping-fast {
+        padding-top: 13px !important;
+    }
+    .form-group {
+        margin-left: 29px;
+    }
+    .form-control {
+        margin-left: -16px;
+        margin-top: -6px;
+    }
+    .badge-light {
+        margin-left: -2px;
+        margin-top: 11px;
+        font-size: 13px;
+    }
+    .cart-btn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .fa-cart-plus {
+        font-size: 18px;
+    }
+}
